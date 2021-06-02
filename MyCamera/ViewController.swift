@@ -21,7 +21,13 @@ class ViewController: UIViewController {
     }
     
     @IBAction func shareButtonAction(_ sender: Any) {
-        
+        if let shareImage = pictureImage.image {
+            let shareItems = [shareImage]
+            let controller = UIActivityViewController(activityItems: shareItems, applicationActivities: nil)
+            
+            controller.popoverPresentationController?.sourceView = view
+            present(controller, animated: true, completion: nil)
+        }
     }
 }
 
