@@ -13,6 +13,7 @@
 		C5CD6EA52667B93C0015485D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5CD6EA32667B93C0015485D /* Main.storyboard */; };
 		C5CD6EA72667B93D0015485D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5CD6EA62667B93D0015485D /* Assets.xcassets */; };
 		C5CD6EAA2667B93D0015485D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5CD6EA82667B93D0015485D /* LaunchScreen.storyboard */; };
+		C5CD6EB22667C1310015485D /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CD6EB12667C1310015485D /* UIImageExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		C5CD6EA62667B93D0015485D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C5CD6EA92667B93D0015485D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C5CD6EAB2667B93D0015485D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C5CD6EB12667C1310015485D /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				C5CD6EA62667B93D0015485D /* Assets.xcassets */,
 				C5CD6EA82667B93D0015485D /* LaunchScreen.storyboard */,
 				C5CD6EAB2667B93D0015485D /* Info.plist */,
+				C5CD6EB12667C1310015485D /* UIImageExtension.swift */,
 			);
 			path = MyCamera;
 			sourceTree = "<group>";
@@ -140,6 +143,7 @@
 				C5CD6EA22667B93C0015485D /* ViewController.swift in Sources */,
 				C5CD6E9E2667B93C0015485D /* AppDelegate.swift in Sources */,
 				C5CD6EA02667B93C0015485D /* SceneDelegate.swift in Sources */,
+				C5CD6EB22667C1310015485D /* UIImageExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
