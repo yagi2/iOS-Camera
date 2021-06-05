@@ -47,6 +47,7 @@
                     </view>
                     <connections>
                         <outlet property="pictureImage" destination="baL-BO-wBH" id="tHw-u1-Pi1"/>
+                        <segue destination="SmW-cs-3aJ" kind="show" identifier="showEffectView" id="Bqz-vJ-fdJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -58,11 +59,12 @@
             <objects>
                 <viewController id="SmW-cs-3aJ" customClass="EffectViewController" customModule="MyCamera" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jJj-co-0jX">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="m7j-6x-vY7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="WTD-fy-jhf"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DLE-Jq-GD6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
