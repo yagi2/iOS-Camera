@@ -10,6 +10,14 @@ import UIKit
 class EffectViewController: UIViewController {
     @IBOutlet weak var effectImage: UIImageView!
     
+    var originalImage: UIImage?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        effectImage.image = originalImage
+    }
+    
     @IBAction func effectButtonAction(_ sender: Any) {
         
     }
@@ -19,6 +27,6 @@ class EffectViewController: UIViewController {
     }
     
     @IBAction func closeButtonAction(_ sender: Any) {
-        
+        dismiss(animated: true, completion: nil)
     }
 }

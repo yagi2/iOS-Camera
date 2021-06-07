@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
     @IBOutlet weak var pictureImage: UIImageView!
 
@@ -51,15 +51,19 @@ class ViewController: UIViewController {
             present(controller, animated: true, completion: nil)
         }
     }
-}
-
-extension ViewController: UINavigationControllerDelegate {
     
-}
-
-extension ViewController: UIImagePickerControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        pictureImage.image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
-        dismiss(animated: true, completion: nil)
+        captureImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
+        dismiss(animated: true, completion: {
+            self.performSegue(withIdentifier: "showEffectView", sender: nil)
+        })
+    }
+    
+    var captureImage: UIImage?
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let nextViewController = segue.destination as? EffectViewController {
+            nextViewController.originalImage = captureImage
+        }
     }
 }
