@@ -10,6 +10,18 @@ import UIKit
 class EffectViewController: UIViewController {
     @IBOutlet weak var effectImage: UIImageView!
     
+    private let filterArray = [ "CIPhotoEffectMono",
+                                "CIPhotoEffectChrome",
+                                "CIPhotoEffectFade",
+                                "CIPhotoEffectInstant",
+                                "CIPhotoEffectNoir",
+                                "CIPhotoEffectProcess",
+                                "CIPhotoEffectTonal",
+                                "CIPhotoEffectTransfer",
+                                "CISepiaTone"
+    ]
+    private var selectedFilterNumber = 0
+    
     var originalImage: UIImage?
     
     override func viewDidLoad() {
@@ -20,7 +32,16 @@ class EffectViewController: UIViewController {
     
     @IBAction func effectButtonAction(_ sender: Any) {
         if let image = originalImage {
-            let filterName = "CIPhotoEffectMono"
+            // エフェクト1週したら元の画像に戻す
+            if selectedFilterNumber == filterArray.count {
+                selectedFilterNumber = 0
+                effectImage.image = image
+                return
+            }
+            
+            let filterName = filterArray[selectedFilterNumber]
+            selectedFilterNumber += 1
+                        
             let rotate = image.imageOrientation
 
             let inputImage = CIImage(image: image)
