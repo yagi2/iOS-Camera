@@ -42,16 +42,6 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         present(alertController, animated: true, completion: nil)
     }
     
-    @IBAction func shareButtonAction(_ sender: Any) {
-        if let shareImage = pictureImage.image?.resize() {
-            let shareItems = [shareImage]
-            let controller = UIActivityViewController(activityItems: shareItems, applicationActivities: nil)
-            
-            controller.popoverPresentationController?.sourceView = view
-            present(controller, animated: true, completion: nil)
-        }
-    }
-    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         captureImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
         dismiss(animated: true, completion: {
